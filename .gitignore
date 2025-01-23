@@ -38,9 +38,6 @@ postgres_data/
 # Ignore log files
 *.log
 
-# Ignore environment variables
-.env
-
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
