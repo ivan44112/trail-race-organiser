@@ -1,0 +1,26 @@
+server:
+  port: 8082
+
+spring:
+  datasource:
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+  sql:
+    init:
+      mode: always
+
+spring.jpa.defer-datasource-initialization: true
+
+websocket:
+  url: ${WEB_SOCKET_URL}
+  topic: ${WEB_SOCKET_SUBSCRIPTION_TOPIC}
+
